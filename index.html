@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапай Хомяка - Игра-Тапалка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Тапай Хомяка</h1>
+            <div class="score-container">
+                <div class="score">
+                    <span class="score-label">Очки:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="coins">
+                    <span class="coins-label">Монеты:</span>
+                    <span id="coins">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="hamster-container">
+                <img id="hamster" src="hamster.png" alt="Хомяк" class="hamster">
+                <div id="click-effect" class="click-effect"></div>
+            </div>
+        </div>
+
+        <div class="upgrades">
+            <h2>Улучшения</h2>
+            <div class="upgrade-list">
+                <div class="upgrade-item" id="upgrade-click">
+                    <div class="upgrade-info">
+                        <h3>Сильные лапки</h3>
+                        <p>+1 очко за клик</p>
+                        <span class="upgrade-cost">Стоимость: <span id="click-cost">10</span> монет</span>
+                    </div>
+                    <button class="upgrade-btn" onclick="buyUpgrade('click')">Купить</button>
+                </div>
+                
+                <div class="upgrade-item" id="upgrade-auto">
+                    <div class="upgrade-info">
+                        <h3>Автокликер</h3>
+                        <p>+1 очко в секунду</p>
+                        <span class="upgrade-cost">Стоимость: <span id="auto-cost">50</span> монет</span>
+                    </div>
+                    <button class="upgrade-btn" onclick="buyUpgrade('auto')">Купить</button>
+                </div>
+                
+                <div class="upgrade-item" id="upgrade-multiplier">
+                    <div class="upgrade-info">
+                        <h3>Множитель</h3>
+                        <p>x2 к получаемым очкам</p>
+                        <span class="upgrade-cost">Стоимость: <span id="multiplier-cost">100</span> монет</span>
+                    </div>
+                    <button class="upgrade-btn" onclick="buyUpgrade('multiplier')">Купить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>Статистика</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Кликов в секунду:</span>
+                    <span id="cps">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Всего кликов:</span>
+                    <span id="total-clicks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Очков за клик:</span>
+                    <span id="points-per-click">1</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Автоочки/сек:</span>
+                    <span id="auto-points">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
