@@ -584,7 +584,7 @@ function updateAdButton() {
         button.textContent = `📺 Подождите ${Math.ceil(remaining / 1000)}с`;
         button.disabled = true;
     } else {
-        button.textContent = '📺 Посмотреть рекламу за 50 монет + 1 кристалл';
+        button.textContent = '📺 50 монет + 1 кристалл за просмотр рекламы';
         button.disabled = false;
     }
 }
