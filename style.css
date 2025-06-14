@@ -301,3 +301,875 @@ body {
     }
 }
 
+
+/* Стили для рекламных блоков */
+.ad-banner {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.ad-placeholder {
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    border: 2px dashed #999;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.ad-placeholder:hover {
+    background: linear-gradient(135deg, #d0d0d0, #e5e5e5);
+    border-color: #777;
+}
+
+.ad-top {
+    margin-bottom: 20px;
+}
+
+.ad-bottom {
+    margin-top: 20px;
+}
+
+/* Стили для кнопки просмотра рекламы */
+.reward-ad-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.watch-ad-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.watch-ad-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.watch-ad-btn:active {
+    transform: translateY(0);
+}
+
+.watch-ad-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Обновляем стили для новой валюты */
+.score, .coins, .gems {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.score-label, .coins-label, .gems-label {
+    color: #666;
+    margin-right: 10px;
+}
+
+#score, #coins, #gems {
+    color: #ff6b35;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#gems {
+    color: #9c27b0;
+}
+
+/* Адаптивность для рекламных блоков */
+@media (max-width: 768px) {
+    .ad-placeholder {
+        font-size: 0.9rem;
+        padding: 15px;
+        min-height: 70px;
+    }
+    
+    .watch-ad-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    
+    .score-container {
+        gap: 15px;
+    }
+    
+    .score, .coins, .gems {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .score-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .score, .coins, .gems {
+        font-size: 1rem;
+    }
+}
+
+
+/* Стили для раздела бустов */
+.boosts-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.boosts-section h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.boosts-category {
+    margin-bottom: 30px;
+}
+
+.boosts-category h3 {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 2px solid #ff9a56;
+    padding-bottom: 10px;
+}
+
+.boosts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.boost-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ff9a56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.boost-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.boost-item.premium {
+    border-color: #9c27b0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(255, 255, 255, 0.8));
+}
+
+.boost-item.premium:hover {
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+}
+
+.boost-item.temporary {
+    border-style: dashed;
+}
+
+.boost-item.temporary::before {
+    content: "⏱️";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+}
+
+.boost-info h4 {
+    color: #ff6b35;
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+
+.boost-item.premium .boost-info h4 {
+    color: #9c27b0;
+}
+
+.boost-info p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.boost-cost {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.boost-level {
+    background: #ff6b35;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.boost-item.premium .boost-level {
+    background: #9c27b0;
+}
+
+.boost-btn {
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+    min-width: 70px;
+}
+
+.boost-item.premium .boost-btn {
+    background: linear-gradient(135deg, #9c27b0, #ba68c8);
+    box-shadow: 0 3px 10px rgba(156, 39, 176, 0.3);
+}
+
+.boost-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.boost-item.premium .boost-btn:hover {
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+}
+
+.boost-btn:active {
+    transform: translateY(0);
+}
+
+.boost-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Адаптивность для бустов */
+@media (max-width: 768px) {
+    .boosts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .boost-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 12px;
+    }
+    
+    .boost-info {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boosts-section {
+        padding: 15px;
+    }
+    
+    .boosts-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .boosts-category h3 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Стили для ачивок */
+.achievements-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.achievements-section h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.achievement-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.achievement-item.completed {
+    border-color: #4CAF50;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(255, 255, 255, 0.8));
+}
+
+.achievement-item.completed .achievement-icon {
+    background: #4CAF50;
+    color: white;
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.achievement-info h4 {
+    color: #ff6b35;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.achievement-info p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.achievement-reward {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Стили для скиллов */
+.skills-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.skills-section h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.passive-skills h3, .active-skills h3 {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 2px solid #ff9a56;
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ff9a56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.skill-item.active-skill {
+    border-color: #9c27b0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(255, 255, 255, 0.8));
+}
+
+.skill-info h4 {
+    color: #ff6b35;
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+
+.skill-item.active-skill .skill-info h4 {
+    color: #9c27b0;
+}
+
+.skill-info p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.skill-level {
+    background: #ff6b35;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.skill-item.active-skill .skill-level {
+    background: #9c27b0;
+}
+
+.skill-btn {
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+    min-width: 70px;
+}
+
+.skill-item.active-skill .skill-btn {
+    background: linear-gradient(135deg, #9c27b0, #ba68c8);
+    box-shadow: 0 3px 10px rgba(156, 39, 176, 0.3);
+}
+
+.skill-btn:hover {
+    transform: translateY(-1px);
+}
+
+.skill-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Стили для скинов */
+.skins-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.skins-section h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skin-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skin-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skin-item.owned {
+    border-color: #4CAF50;
+}
+
+.skin-item.active {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 255, 255, 0.8));
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.skin-item.premium {
+    border-color: #9c27b0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(255, 255, 255, 0.8));
+}
+
+.skin-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ddd;
+}
+
+.skin-item.active .skin-preview {
+    border-color: #ff6b35;
+}
+
+.skin-info h4 {
+    color: #ff6b35;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.skin-item.premium .skin-info h4 {
+    color: #9c27b0;
+}
+
+.skin-info p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.skin-cost {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.skin-status {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.skin-item.premium .skin-status {
+    background: #9c27b0;
+}
+
+/* Обновляем стили для новых валют */
+.score, .coins, .gems, .level, .skill-points {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score-label, .coins-label, .gems-label, .level-label, .skill-points-label {
+    color: #666;
+    margin-right: 10px;
+}
+
+#score, #coins, #gems, #level, #skill-points {
+    color: #ff6b35;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#gems {
+    color: #9c27b0;
+}
+
+#level {
+    color: #4CAF50;
+}
+
+#skill-points {
+    color: #2196F3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .achievements-grid, .skins-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-item, .achievement-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .score-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .score, .coins, .gems, .level, .skill-points {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .score-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Стили для таблицы лидеров */
+.leaderboard-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.leaderboard-section h2 {
+    color: #ff6b35;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff9a56;
+}
+
+.leaderboard-header h3 {
+    color: #666;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.reset-leaderboard-btn {
+    background: linear-gradient(135deg, #f44336, #da190b);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(244, 67, 54, 0.3);
+}
+
+.reset-leaderboard-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.reset-leaderboard-btn:active {
+    transform: translateY(0);
+}
+
+.leaderboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.leaderboard-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.leaderboard-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-item.new-record {
+    border-color: #FFD700;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.8));
+    animation: newRecordGlow 2s ease-in-out;
+}
+
+@keyframes newRecordGlow {
+    0%, 100% { box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6); }
+}
+
+.leaderboard-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    color: white;
+}
+
+.leaderboard-item.new-record .leaderboard-icon {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #333;
+}
+
+.leaderboard-info {
+    flex-grow: 1;
+}
+
+.leaderboard-info h4 {
+    color: #ff6b35;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.leaderboard-item.new-record .leaderboard-info h4 {
+    color: #FF8C00;
+}
+
+.leaderboard-info p {
+    color: #666;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.leaderboard-value {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.leaderboard-date {
+    font-size: 0.8rem;
+    color: #999;
+    font-style: italic;
+}
+
+.leaderboard-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #eee;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.leaderboard-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b35, #ff9a56);
+    transition: width 0.3s ease;
+}
+
+.leaderboard-item.new-record .leaderboard-progress-bar {
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+}
+
+.record-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #FFD700;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для таблицы лидеров */
+@media (max-width: 768px) {
+    .leaderboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .leaderboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .leaderboard-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboard-section {
+        padding: 15px;
+    }
+    
+    .leaderboard-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .leaderboard-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .reset-leaderboard-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+

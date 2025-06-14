@@ -9,6 +9,11 @@
 <body>
     <div class="game-container">
         <div class="header">
+            <!-- Место для верхнего баннера -->
+            <div class="ad-banner ad-top">
+                <div class="ad-placeholder">Реклама 728x90</div>
+            </div>
+            
             <h1>Тапай Хомяка</h1>
             <div class="score-container">
                 <div class="score">
@@ -19,6 +24,18 @@
                     <span class="coins-label">Монеты:</span>
                     <span id="coins">0</span>
                 </div>
+                <div class="gems">
+                    <span class="gems-label">Кристаллы:</span>
+                    <span id="gems">0</span>
+                </div>
+                <div class="level">
+                    <span class="level-label">Уровень:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="skill-points">
+                    <span class="skill-points-label">Очки скиллов:</span>
+                    <span id="skill-points">0</span>
+                </div>
             </div>
         </div>
 
@@ -26,6 +43,13 @@
             <div class="hamster-container">
                 <img id="hamster" src="hamster.png" alt="Хомяк" class="hamster">
                 <div id="click-effect" class="click-effect"></div>
+            </div>
+            
+            <!-- Кнопка для просмотра рекламы за награду -->
+            <div class="reward-ad-section">
+                <button id="watch-ad-btn" class="watch-ad-btn" onclick="watchRewardedAd()">
+                    📺 Посмотреть рекламу за 50 монет
+                </button>
             </div>
         </div>
 
@@ -61,6 +85,74 @@
             </div>
         </div>
 
+        <!-- Новый раздел бустов -->
+        <div class="boosts-section">
+            <h2>Бусты</h2>
+            
+            <!-- Обычные бусты -->
+            <div class="boosts-category">
+                <h3>Обычные бусты (монеты)</h3>
+                <div class="boosts-grid" id="regular-boosts">
+                    <!-- Бусты будут добавлены через JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Премиум бусты -->
+            <div class="boosts-category">
+                <h3>Премиум бусты (кристаллы)</h3>
+                <div class="boosts-grid" id="premium-boosts">
+                    <!-- Бусты будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Новые разделы: Ачивки, Скиллы, Скины -->
+        <div class="achievements-section">
+            <h2>Ачивки</h2>
+            <div class="achievements-grid" id="achievements-grid">
+                <!-- Ачивки будут добавлены через JavaScript -->
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2>Скиллы</h2>
+            <div class="skills-container">
+                <div class="passive-skills">
+                    <h3>Пассивные скиллы</h3>
+                    <div class="skills-grid" id="passive-skills-grid">
+                        <!-- Пассивные скиллы будут добавлены через JavaScript -->
+                    </div>
+                </div>
+                <div class="active-skills">
+                    <h3>Активные скиллы</h3>
+                    <div class="skills-grid" id="active-skills-grid">
+                        <!-- Активные скиллы будут добавлены через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skins-section">
+            <h2>Скины</h2>
+            <div class="skins-grid" id="skins-grid">
+                <!-- Скины будут добавлены через JavaScript -->
+            </div>
+        </div>
+
+        <!-- Таблица лидеров -->
+        <div class="leaderboard-section">
+            <h2>Таблица лидеров</h2>
+            <div class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h3>Ваши личные рекорды</h3>
+                    <button class="reset-leaderboard-btn" onclick="resetLeaderboard()">Сбросить рекорды</button>
+                </div>
+                <div class="leaderboard-grid" id="leaderboard-grid">
+                    <!-- Рекорды будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </div>
+
         <div class="stats">
             <h2>Статистика</h2>
             <div class="stats-grid">
@@ -81,6 +173,11 @@
                     <span id="auto-points">0</span>
                 </div>
             </div>
+        </div>
+        
+        <!-- Нижний рекламный баннер -->
+        <div class="ad-banner ad-bottom">
+            <div class="ad-placeholder">Реклама 728x90</div>
         </div>
     </div>
 
